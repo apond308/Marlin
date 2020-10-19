@@ -431,7 +431,7 @@
  * Define one or both of these to override the default 0-255 range.
  */
 //#define FAN_MIN_PWM 50
-//#define FAN_MAX_PWM 128
+#define FAN_MAX_PWM 200
 
 /**
  * FAST PWM FAN Settings
@@ -1653,10 +1653,10 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
-//#define LIN_ADVANCE
+#define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.22    // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.1    // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
@@ -2275,7 +2275,7 @@
   #endif
 
   #if AXIS_IS_TMC(X2)
-    #define X2_CURRENT      580
+    #define X2_CURRENT      900
     #define X2_CURRENT_HOME X2_CURRENT
     #define X2_MICROSTEPS    16
     #define X2_RSENSE         0.11
@@ -2291,7 +2291,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y2)
-    #define Y2_CURRENT      580
+    #define Y2_CURRENT      900
     #define Y2_CURRENT_HOME Y2_CURRENT
     #define Y2_MICROSTEPS    16
     #define Y2_RSENSE         0.11
@@ -2299,7 +2299,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       580
+    #define Z_CURRENT       900
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
     #define Z_RSENSE          0.11
@@ -2307,7 +2307,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT      580
+    #define Z2_CURRENT      900
     #define Z2_CURRENT_HOME Z2_CURRENT
     #define Z2_MICROSTEPS    16
     #define Z2_RSENSE         0.11
@@ -2315,7 +2315,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z3)
-    #define Z3_CURRENT      580
+    #define Z3_CURRENT      900
     #define Z3_CURRENT_HOME Z3_CURRENT
     #define Z3_MICROSTEPS    16
     #define Z3_RSENSE         0.11
@@ -2323,7 +2323,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z4)
-    #define Z4_CURRENT      580
+    #define Z4_CURRENT      900
     #define Z4_CURRENT_HOME Z4_CURRENT
     #define Z4_MICROSTEPS    16
     #define Z4_RSENSE         0.11
@@ -2331,56 +2331,56 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      350
+    #define E0_CURRENT      700
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT      350
+    #define E1_CURRENT      700
     #define E1_MICROSTEPS    16
     #define E1_RSENSE         0.11
     #define E1_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E2)
-    #define E2_CURRENT      350
+    #define E2_CURRENT      700
     #define E2_MICROSTEPS    16
     #define E2_RSENSE         0.11
     #define E2_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E3)
-    #define E3_CURRENT      350
+    #define E3_CURRENT      700
     #define E3_MICROSTEPS    16
     #define E3_RSENSE         0.11
     #define E3_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E4)
-    #define E4_CURRENT      350
+    #define E4_CURRENT      700
     #define E4_MICROSTEPS    16
     #define E4_RSENSE         0.11
     #define E4_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E5)
-    #define E5_CURRENT      350
+    #define E5_CURRENT      700
     #define E5_MICROSTEPS    16
     #define E5_RSENSE         0.11
     #define E5_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E6)
-    #define E6_CURRENT      350
+    #define E6_CURRENT      700
     #define E6_MICROSTEPS    16
     #define E6_RSENSE         0.11
     #define E6_CHAIN_POS     -1
   #endif
 
   #if AXIS_IS_TMC(E7)
-    #define E7_CURRENT      350
+    #define E7_CURRENT      700
     #define E7_MICROSTEPS    16
     #define E7_RSENSE         0.11
     #define E7_CHAIN_POS     -1
@@ -2581,7 +2581,7 @@
    * Beta feature!
    * Create a 50/50 square wave step pulse optimal for stepper drivers.
    */
-  //#define SQUARE_WAVE_STEPPING
+  #define SQUARE_WAVE_STEPPING
 
   /**
    * Enable M122 debugging command for TMC stepper drivers.
